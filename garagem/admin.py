@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Categoria
+from .models import Categoria, Marca, Acessorio
 
 @admin.register(Marca)
 class MarcaAdmin(admin.ModelAdmin):
@@ -15,3 +15,10 @@ class CategoriaAdmin(admin.ModelAdmin):
     list_filter = ("descricao",)
     ordering = ("descricao")
 
+
+@admin.register(Acessorio)
+class AcessorioAdmin(admin.ModelAdmin):
+    list_display = ("descricao")
+    search_fields = ("descricao")
+    list_filter = ("descricao",)
+    ordering = ("descricao")
