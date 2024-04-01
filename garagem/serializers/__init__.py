@@ -1,0 +1,6 @@
+from garagem.serializers.marca import MarcaSerializer
+from garagem.serializers.categoria import CategoriaSerializer
+from garagem.serializers.acessorio import AcessorioSerializer
+from garagem.serializers.cor import CorSerializer
+from garagem.serializers.veiculo import VeiculoSerializer, VeiculoDetailSerializer, VeiculoListSerializer
+from garagem.serializers.modelo import ModeloSerializer
