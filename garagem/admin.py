@@ -40,9 +40,9 @@ class ModeloAdmin(admin.ModelAdmin):
 
 @admin.register(Veiculo)
 class VeiculoAdmin(admin.ModelAdmin):
-    list_display = ("modelo", "ano" )
-    search_fields = ("modelo", "ano")
-    list_filter = ("modelo",)
-    ordering = ("modelo", "ano")
+    list_display = ("descricao", )
+    search_fields = ("descricao",)
+    list_filter = ("descricao",)
+    ordering = ("descricao",)
 
 
