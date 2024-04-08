@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'corsheaders',
     'rest_framework',
+    'usuario',
     'garagem',
     'drf_spectacular',
 ]
@@ -153,3 +154,5 @@ SPECTACULAR_SETTINGS = {
     "DESCRIPTION": "API para gerenciamento de livraria, incluindo endpoints e documentação.",
     "VERSION": "1.0.0",
 }
+
+AUTH_USER_MODEL = "usuario.Usuario"

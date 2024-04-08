@@ -23,6 +23,7 @@ from drf_spectacular.views import (
     SpectacularRedocView,
     SpectacularSwaggerView,
 )
+from usuario.router import router as usuario_router
 
 
 router = DefaultRouter()
@@ -48,5 +49,5 @@ urlpatterns = [
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
-
-]
+    path("api/", include(usuario_router.urls)),
+]   
