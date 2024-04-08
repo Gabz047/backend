@@ -2,6 +2,7 @@ from django.db import models
 from garagem.models.cor import Cor
 from garagem.models.modelo import Modelo
 from garagem.models.acessorio import Acessorio
+from uploader.models.image import Image
 
 class Veiculo(models.Model):
     ano = models.IntegerField()
@@ -12,5 +13,5 @@ class Veiculo(models.Model):
     acessorios = models.ManyToManyField(Acessorio, related_name="veiculos")
 
     def __str__(self):
-        return f"{self.descricao} ({self.modelo}) ({self.cor}) ({self.acessorio})"
+        return f"{self.descricao} ({self.modelo}) ({self.cor}) ({self.acessorios})"
     

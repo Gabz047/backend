@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'usuario',
+    'uploader',
     'garagem',
     'drf_spectacular',
 ]
@@ -156,3 +157,8 @@ SPECTACULAR_SETTINGS = {
 }
 
 AUTH_USER_MODEL = "usuario.Usuario"
+
+MEDIA_URL = "http://localhost:8000/media/"
+MEDIA_ENDPOINT = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+FILE_UPLOAD_PERMISSIONS = 0o640
